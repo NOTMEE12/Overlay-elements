@@ -1,5 +1,3 @@
-import pygame
-
 from Window import *
 from AnimSurface import AnimSurface
 import random
