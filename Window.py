@@ -12,7 +12,8 @@ pygame.init()
 def get_free_area():
 	monitor_info = win32api.GetMonitorInfo(win32api.MonitorFromPoint((0, 0)))
 	area = monitor_info.get("Work")
-	return area[2:4]
+	area = (monitor_info.get("Monitor")[2], monitor_info.get("Monitor")[3] - (monitor_info.get("Monitor")[3]-area[3])*2)
+	return area
 
 
 def make_window_on_top():
